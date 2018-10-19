@@ -68,7 +68,7 @@ class Side extends Component {
               <Segment basic>
                 <div className='stretch'>
                 <Switch>
-                  <Route path="/" component={Home} exact />
+                  <Route path="/carpicker" component={Home} exact />
                   <Route path="/selections" component={CarSelector} />
                   <Route path="/solutions" component={Solutions} />
                   <Route path="/login" component={LoginPage} />
