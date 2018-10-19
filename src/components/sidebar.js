@@ -39,7 +39,7 @@ class Side extends Component {
               visible={visible}
               width='thin'          
             >
-              <Link to='/'>
+              <Link to='/carpicker/'>
               <Menu.Item>
                 <Icon name='home' />
                 Home
