@@ -1,0 +1,10 @@
+.sidebar {
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
+.stretch {
+    min-height: 400px;
+    height: auto !important;
+    height: 400px;
+}

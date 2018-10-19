@@ -1,0 +1,33 @@
+
+h1, form {
+    width: 200px;
+    margin: 10px auto;
+  
+}
+
+h1 {
+    display: block;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+form {
+    display: block;
+    margin-top: 20px;
+    width: 200px;
+    height: 35px;
+}
+
+.input {
+    margin-bottom: 10px;
+}
+
+span{
+    margin-right: 10px;
+    white-space: nowrap;   
+}
+
+Button {
+    margin-bottom: 5px;
+}
+
