@@ -186,5 +186,17 @@ h2, h3, h4 {
     #infoPop {
         width: 100%;
     }
+    
+    .carSelection {
+        width: 95%;
+        font-size: 3vw;
+        margin-left: 8px;
+    }
+
+    .carSelection img {
+        top: 25px;
+        width: 105px;
+
+    }
 }
 
