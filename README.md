@@ -1,3 +1,7 @@
+A website build with React and Redux that allows users to select or remove an assortment of vehicles. Uses a search form to find vehicles of certain qualities.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
