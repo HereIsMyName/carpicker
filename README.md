@@ -1,5 +1,8 @@
-A website build with React and Redux that allows users to select or remove an assortment of vehicles. Uses a search form to find vehicles of certain qualities.
+A website build with React and Redux that allows users to select or remove an assortment of vehicles. Uses a form to filter out vehicles that match features chosen by user. Users can select vehicle models and their state is maintained with React and local storage. Some of the styling is done with Semantic UI. 
 
+https://mhopard.github.io/carpicker
+
+![alt text](https://mikehopard.com/Car_Site_Pic.jpg)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
