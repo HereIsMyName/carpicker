@@ -8,7 +8,7 @@ import hatchback from '../images/hatchback.jpeg';
 import exotic from '../images/exotic.jpeg';
 import pickup from '../images/pickup.jpeg';
 import luxury from '../images/luxury.jpeg';
-import moto from '../images/moto.jpeg';
+import motorcycle from '../images/motorcycle.jpeg';
 import van from '../images/van.jpeg';
 import classic from '../images/classic.jpeg';
 import "../styles/carPages.css";
@@ -89,8 +89,8 @@ const Cars = () => {
             </Link>
           </Grid.Column>
           <Grid.Column>
-          <Link to='/cars/motos'>
-            <Image size='small' src={moto} />
+          <Link to='/cars/motorcycles'>
+            <Image size='small' src={motorcycle} />
             <Header as='h4'textAlign='center'>Motorcycle</Header>
             </Link>
           </Grid.Column>
