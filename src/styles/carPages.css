@@ -1,3 +1,11 @@
+a[href]:hover {
+    text-decoration: underline;
+}
+
+.navlist a[href]:hover, .sidebar a[href]:hover {
+    text-decoration: initial;
+} 
+
 .groupItem {
     padding: 0 9%;
     margin-top: -10px;
@@ -19,29 +27,56 @@
     text-decoration: underline;
 }
 
-/* .carImage {
-    margin-top: 2%;
-    padding: 2%;
-} */
-
 .carBody {
     margin-top: 5px
 }
 
+#bread {
+    position: relative;
+    left: -11%;
+}
+
 .modelBody, .infoBody {
-    margin: 30px -20%;
+    margin: 15px -20%;
     padding: 30px;
-    background: rgba(243, 232, 232, 0.8);;
+    background: rgb(255, 255, 255);
     border: 1px solid black;
     border-radius: 6px;
 }
 
-h2, h3, h4 {
+h1, h2, h3, h4 {
     text-align: center;
 }
 
+h1, h4 {
+    margin-bottom: 30px
+}
+
+#finder-form {
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+#radio {
+    margin: 15px 0;
+}
+
+#radio > span {
+    font-size: 1.1em;
+}
+
+#radio > input {
+    margin-right: 15px;
+}
+
 .infoBody {
-    margin: 30px 10%;
+    margin: 0 5%;
+    min-height: 450px;
+    width: 90%;
+    content: '';
+    display: table;
+    clear: both;
 }
 
 .infoBody h3, h5 {
@@ -49,47 +84,98 @@ h2, h3, h4 {
     text-decoration: underline;
 }
 
-.modelBody  p {
+.infoBody h4 {
+    font-size: .8em;
+}
+
+.infoBody p {
     font-size: 1.1em;
-    clear: right;
-    font-weight: bold;
+    line-height: 1.7em;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.howto {
+    display: block;
+    float: left;
+    width: 16%;
+    height: auto;
+    margin: 20px calc((100% - (16% * 4)) / 8);
+    line-height: 1.8em;
+    background-color: white;
+    box-shadow: 2px 2px 10px 2px #a7a2a2, -2px -2px 10px 2px #a7a2a2;
+}
+
+div.howto {
+    /* margin: 20px -20px; */
+    border-radius: 3px;
+    background: initial;
+    box-shadow: initial;
+}
+
+.modelBody {
+    margin-bottom: 0;
+}
+
+.modelBody > div {
+    padding: 1px 0;
+    margin: 0 auto;
+    width: 260px;
+}
+
+.modelBody p {
     margin: 8px;
-    margin-left: -60px;
+    margin-left: 10px;
+    padding: 4px 8px;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 1.1em;
+    font-family: 'PT Sans', sans-serif;
 }
 
-.modelBody  button {
-    position: absolute;
-    display: inline;
-    font-size: .9em;
+.modelBody button {
+    float: right; 
     margin-left: 7px;
+    padding: 1px 10px;
+    border-radius: 5px;
+    min-width: 70px;
+    font-size: .9em;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(219, 219, 219)
 }
 
-.modelBody > p:not(.picked):hover {
-    color: blue;
+.modelBody button:not(.picked):hover {
+    background-color: rgb(241, 238, 238) !important;
     cursor: pointer
 }
 
 .picked {
-    background-color: rgb(63, 63, 63);
-    color: white;
-    cursor: default;
+    color: rgb(250, 250, 250) !important;
+    background-color: rgb(48, 39, 168) !important;
+    font-weight: default;
+    cursor: pointer;
+}
+
+.picked:hover {
+    background-color: rgb(85, 74, 233) !important
 }
 
 .carSelection {
     position: relative;
-    width: 350px;
+    width: 280px;
     height: auto;
     padding: 5px;
-    /* padding-bottom: 5px; */
     margin: 15px;
     font-weight: bold;
-    font-size: 1.1em;
     border: 1px solid black;
 }
 
 .carSelection span:nth-of-type(1) {
-    /* text-decoration: underline; */
     font-size: 1.2em
+}
+
+.carSelection span:nth-of-type(2) {
+    font-size: .8em
 }
 
 .carSelection img {
@@ -97,14 +183,14 @@ h2, h3, h4 {
     display: block;
     right: 10px;
     top: 10px;
-    width: 130px;
+    width: 60px;
 }
 
 .carSelection button {
     margin-top: 28px;
 }
 
-@keyframes traffic {
+@keyframes popup {
     from {bottom: -181px;}
     to {bottom: 0px;}
 }
@@ -122,7 +208,7 @@ h2, h3, h4 {
     user-select: none;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     box-shadow:0px 0px 0px 1px rgb(255, 255, 255), 0px 0px 0px 1px rgb(255, 255, 255);
-    animation: traffic .7s linear 1s forwards;
+    animation: popup .4s linear 1s forwards;
     content: '';
     display: table;
     clear: both;
@@ -131,6 +217,7 @@ h2, h3, h4 {
 
 #infoPop h3 {
     margin: 0px;
+    margin-left: 20px;
     margin-bottom: 3px;
     border-bottom: 1px solid #fff;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -142,7 +229,6 @@ h2, h3, h4 {
     margin: 0 auto;
     padding: 5px;
     padding-bottom: 2px;
-    /* border: 1px solid white; */
 }
 
 .carRecommend p {
@@ -160,11 +246,6 @@ h2, h3, h4 {
     padding-top: 3px;
 }
 
-.infoBody p {
-    font-size: 1.1em;
-    line-height: 1.7em;
-}
-
 .errPage {
     background-color: #fff;
     margin: 0 auto;
@@ -175,7 +256,63 @@ h2, h3, h4 {
 
 @media only screen and (max-width: 720px) {
    .modelBody, .infoBody, .carBody {
-        margin: 30px 3px;
+        margin: 30px auto;
+    }
+
+    .modelBody > div {
+        padding: 1px 0;
+        width: 130%;
+        margin: 0 auto;
+        margin-left: -30px;
+    }
+
+    #finder-form {
+        width: 230px;
+    }
+
+    .infoBody {
+        width: 100%;
+    }
+
+    .infoBody h4{
+        font-size: .7em;
+    }
+
+    .infoBody p {
+        text-align: center;
+    }
+
+    .howto{
+        float: none;
+        width: 45%;
+        margin: 23% 0;
+        margin-left: -10px;
+    }
+
+    div.howto {
+        position: absolute;
+        padding: 10px 0;
+        font-size: 1.05em;
+    }
+
+    div.howto:nth-of-type(1) {
+        top: 15%;
+        right: 25px;
+    }
+    
+    div.howto:nth-of-type(2) {
+        top: 36%;
+        right: 25px;
+    }
+    
+    div.howto:nth-of-type(3) {
+        top: 52%;
+        right: 25px;
+    }
+    
+    div.howto:nth-of-type(4) {
+        top: 73%;
+        right: 25px;
     }
 
     .errPage {
@@ -186,7 +323,7 @@ h2, h3, h4 {
     #infoPop {
         width: 100%;
     }
-    
+
     .carSelection {
         width: 95%;
         font-size: 3vw;
@@ -194,8 +331,8 @@ h2, h3, h4 {
     }
 
     .carSelection img {
-        top: 25px;
-        width: 105px;
+        top: 10px;
+        width: 60px;
 
     }
 }
