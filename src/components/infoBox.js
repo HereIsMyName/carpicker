@@ -19,7 +19,7 @@ class InfoBox extends Component {
     'exotic',
     'hatchback',
     'luxury',
-    'moto',
+    'motorcycle',
     'pickup',
     'sedan',
     'suv',
@@ -27,6 +27,7 @@ class InfoBox extends Component {
   ]
   
   componentDidMount() {
+    // Displays a random vehicle in the popup box
     document.body.appendChild(document.getElementById('infoPop'));
     let randCar = this.cars[Math.floor(Math.random() * 9)];
     this.randomImage(randCar);
