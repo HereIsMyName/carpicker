@@ -17,11 +17,14 @@ const CarAdder = ({cars, handleClick}) => {
       )
     })
   ) : (
-    <p>Vehicles selected are displayed here</p>
+    <div style={{display: 'inline-block', padding: '37px 21px', border: '1px solid black'}}>
+      <p>Vehicles selected are displayed here</p>
+    </div>
   )
   return (
     <div>
       <div className ='infoBody'>
+      <h2>Cars Selected</h2>
       <h4>Cars shown represent vehicle class</h4>
         {carList}
       </div>
