@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 
 class Motos extends Component {
     state= {
-        motos: [
-            {carClass: 'moto', model: 'Harley Davidson'},
-            {carClass: 'moto', model: 'Kawazaki'},
-            {carClass: 'moto', model: 'Yamaha'},
-            {carClass: 'moto', model: 'Ducati'},
-            {carClass: 'moto', model: 'Honda'},
-            {carClass: 'moto', model: 'BMW'},
-            {carClass: 'moto', model: 'Suzuki'}
+        motorcycles: [
+            {carClass: 'motorcycle', model: 'Harley Davidson'},
+            {carClass: 'motorcycle', model: 'Kawazaki'},
+            {carClass: 'motorcycle', model: 'Yamaha'},
+            {carClass: 'motorcycle', model: 'Ducati'},
+            {carClass: 'motorcycle', model: 'Honda'},
+            {carClass: 'motorcycle', model: 'BMW'},
+            {carClass: 'motorcycle', model: 'Suzuki'}
         ]
     }
 
@@ -29,24 +29,24 @@ class Motos extends Component {
 
 
     render() {
-        const { motos } = this.state
+        const { motorcycles } = this.state
         const { cars }   = this.props
-        let hatchbackList = motos.map((hatchback, i) => {
-            let cName = cars.find(car => car.model === hatchback.model) ? 'picked': ''
+        let motoList = motorcycles.map((motorcycle, i) => {
+            let cName = cars.find(car => car.model === motorcycle.model) ? 'picked': ''
             return (
-                <div style={{margin: '0 auto', width: '60%',textAlign: 'center'}} key={hatchback.model}>
-                    <p>{hatchback.model} <button  className={cName} onClick={() => this.handleClick(hatchback)}>{cName ? 'Remove' : 'Add'}</button></p>
+                <div key={motorcycle.model}>
+                    <p>{motorcycle.model} <button  className={cName} onClick={() => this.handleClick(motorcycle)}>{cName ? 'Remove' : 'Add'}</button></p>
                 </div> 
             )
         });
         
         return (
             <div>
-                <Bread3 title='Motos' />
+                <Bread3 title='Motorcycles' />
                 <div className ='modelBody'>
-                <h2>Motos</h2>
+                <h2>Motorcycles</h2>
                 <h3>Select desired vehicles</h3>
-                {hatchbackList}
+                {motoList}
                 </div>
             </div>
         );
@@ -67,4 +67,5 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Motos);
+
 
