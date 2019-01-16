@@ -4,12 +4,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Header, Image, Grid } from 'semantic-ui-react';
 import "../../styles/carPages.css";
+import PropTypes from 'prop-types';
 
 const CarFinderResults = (props) => {
 
     const refresh = (e) => {
         window.location.reload();
-        console.log('process here ' +process.env.PUBLIC_URL)
     }
 
     return (
@@ -18,7 +18,7 @@ const CarFinderResults = (props) => {
             <h3>{props.displayCars.length > 0 ? 'Recommended Cars': 'No Results'}</h3>
             <div className='results'>
             <Grid stackable divided='vertically' align='center'>
-            <Grid.Row columns={props.displayCars.length} >
+            <Grid.Row columns={props.displayCars.length > 0 ? props.displayCars.length : 1} >
             {
                 props.displayCars.map(car => {
                     return (
@@ -38,5 +38,8 @@ const CarFinderResults = (props) => {
     );
 }
 
+CarFinderResults.propTypes = {
+    displayCars: PropTypes.array
+}
 
 export default CarFinderResults;
