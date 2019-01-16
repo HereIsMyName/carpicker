@@ -21,6 +21,7 @@ class Classics extends Component {
         })
         if(!obj.length) {
             this.props.addCar(model);
+            console.log(this.props.addCar)
         }
         else {
             this.props.deleteCar(obj[0].model)
@@ -34,7 +35,7 @@ class Classics extends Component {
         let classicList = classics.map((classic, i) => {
             let cName = cars.find(car => car.model === classic.model) ? 'picked': ''
             return (
-                <div style={{margin: '0 auto', width: '60%',textAlign: 'center'}} key={classic.model}>
+                <div key={classic.model}>
                     <p>{classic.model} <button className={cName} onClick={() => this.handleClick(classic)}>{cName? 'Remove' : 'Add Car'}</button></p>
                 </div>
                 
