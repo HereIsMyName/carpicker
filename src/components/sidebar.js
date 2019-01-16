@@ -3,9 +3,7 @@ import { Icon, Menu, Segment, Sidebar } from 'semantic-ui-react';
 import { Route, Switch, Link } from "react-router-dom";
 import Home from "../components/home";
 import CarPage from '../components/carPage';
-import Solutions from '../components/solutions';
-import LoginPage from "../components/loginPage";
-import SignupPage from "../components/signupPage";
+import About from '../components/about';
 import CarFinderPage from "./car-finder/carFinderPage";
 import CarSelector from './carSelector';
 import '../styles/sidebar_css.css';
@@ -44,6 +42,12 @@ class Side extends Component {
                 Home
               </Menu.Item>
               </Link>
+              <Link to='/about'>
+              <Menu.Item>
+                <Icon name='road' />
+                About
+              </Menu.Item>
+              </Link>
               <Link to='/cars'>
               <Menu.Item>
                 <Icon name='car' />
@@ -56,22 +60,14 @@ class Side extends Component {
                 Selections
               </Menu.Item>
               </Link>
-              <Link to='solutions'>
-              <Menu.Item>
-                <Icon name='road' />
-                Solutions
-              </Menu.Item>
-              </Link>
             </Sidebar>
             <Sidebar.Pusher>
               <Segment basic>
                 <div className='stretch'>
                 <Switch>
                   <Route path="/" component={Home} exact />
+                  <Route path="/about" component={About}/>
                   <Route path="/selections" component={CarSelector} />
-                  <Route path="/solutions" component={Solutions} />
-                  <Route path="/login" component={LoginPage} />
-                  <Route path="/signup" component={SignupPage} />
                   <Route path="/car-finder" component={CarFinderPage} />
                   <CarPage />
                 </Switch>
