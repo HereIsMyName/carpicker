@@ -14,8 +14,6 @@ class CarSelector extends Component {
     const { cars } = this.props
     return (
       <div className="collection">
-        <h1>Cars Selected</h1>
-        
         <CarAdder cars={cars} handleClick={this.handleClick}/>
       </div>
     )
