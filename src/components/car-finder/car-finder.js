@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Form, Button, Header } from 'semantic-ui-react';
-import PropTypes from 'prop-types';
 import {Submit} from './finder';
-
+import InfoBox from "../../components/infoBox";
+import PropTypes from 'prop-types';
 
 class CarFinder extends Component {
 
@@ -47,7 +47,7 @@ class CarFinder extends Component {
     
     render() {
         return (
-            <div>
+            <div id='finder-form'>
                 <Form onSubmit={this.handleSubmit} id="carform">
                 <p>Select a vehicle size</p>
                 <select defaultValue="" name="size" form="carform"  onChange={this.handleChange}>
@@ -74,13 +74,14 @@ class CarFinder extends Component {
                 <Header as='h4' color='red'>{this.state.error}</Header>
                     <Button primary>Find Car</Button>
                 </Form>
+                <InfoBox />
             </div>
         );
     }
 }
 
-// CarFinder.propTypes = {
-//   submit: PropTypes.func.isRequired
-// }
+CarFinder.propTypes = {
+  submit: PropTypes.func.isRequired
+}
             
 export default CarFinder;
