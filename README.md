@@ -2,8 +2,6 @@ A website build with React and Redux that allows users to select or remove an as
 
 https://mhopard.github.io/carpicker
 
-![alt text](https://mikehopard.com/Car_Site_Pic.jpg)
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
