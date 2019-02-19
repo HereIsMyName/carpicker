@@ -1,7 +1,7 @@
-This is the previous static version of the auto-picker site found which you can find here https://glacial-crag-88214.herokuapp.com
+This is the previous static version of the auto-picker site which can be found here https://glacial-crag-88214.herokuapp.com
 
 
-old static version 
+old static version link
 https://mhopard.github.io/carpicker
 
 
