@@ -1,5 +1,7 @@
-A website build with React and Redux that allows users to select or remove an assortment of vehicles. Uses a form to filter out vehicles that match features chosen by user. Users can select vehicle models and their state is maintained with React and local storage. Some of the styling is done with Semantic UI. 
+This is the previous static version of the auto-picker site found which you can find here https://glacial-crag-88214.herokuapp.com
 
+
+old static version 
 https://mhopard.github.io/carpicker
 
 
